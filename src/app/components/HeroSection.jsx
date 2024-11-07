@@ -1,10 +1,10 @@
 import React from 'react';
 import Sidebar from "./Sidebar";
 import Image from 'next/image';
-
+import { FaAward } from "react-icons/fa";
 export default function Home() {
   return (
-    <div className="w-screen">
+    <div className="">
       <header className="bg-purple-900 w-full py-6 flex justify-end pr-4">
         {/* Header can contain elements like profile icon, notifications etc. */}
       </header>
@@ -19,10 +19,10 @@ export default function Home() {
         </button>
       </div>
 
-      <main className="flex flex-col md:flex-row justify-between items-center gap-10 sm:gap-20 p-6 mt-10 sm:mt-20">
+      <main className="flex flex-col  md:flex-row justify-between items-center gap-16 sm:gap-20 p-6 mt-20 sm:mt-40 md:ml-20">
         <div className="md:flex-1">
-          <div className="flex items-center mb-4">
-            <i>icon</i>
+          <div className="flex items-center mb-4  bg-gray-200 border rounded-xl shadow p-2 w-64 sm:w-72">
+            <i> <FaAward className="text-4xl text-red-800" /></i>
             <p className="ml-2 text-sm sm:text-base">Award winning digital service</p>
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold mb-4">
@@ -32,19 +32,19 @@ export default function Home() {
             At Oohpoint, we are passionate about partnering with events of all types—college fests, corporate gatherings, competitions, and more. Whether it's a small or large event, we can provide the perfect sponsorship to ensure your attendees get the most out of your occasion.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 bg-white p-2 rounded-md">
+          <div className="flex  gap-4 bg-white p-2 rounded-md justify-center">
             <input
               type="email"
               placeholder="Enter your email"
               className="rounded-lg px-4 py-2 flex-1 text-sm sm:text-base"
             />
-            <button className="bg-black text-white px-4 py-2 rounded-lg text-sm sm:text-base">
+            <button className="bg-black text-white px-4 py-2  rounded-lg text-sm sm:text-base ">
               Book a free consultation
             </button>
           </div>
         </div>
 
-        <div className="flex justify-center items-center bg-gray-100 md:flex-1 w-full md:w-auto">
+        <div className="flex justify-center items-center bg-gray-100 md:flex-1  md:w-auto">
           <div className="relative max-w-md w-full">
             {/* Dots decoration behind the main image */}
             <img

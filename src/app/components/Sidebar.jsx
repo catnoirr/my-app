@@ -34,25 +34,20 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 ${
-          isMobileMenuOpen ? "right-0" : "-right-full"
-        } lg:left-0 h-screen bg-purple-800 text-white transition-all duration-300 ${
+        className={`fixed top-0 ${isMobileMenuOpen ? "right-0" : "-right-full"} lg:left-0 h-screen bg-purple-800 text-white transition-all duration-300 ${
           isExpanded ? "w-48" : "w-20"
         } z-40`}
       >
         {/* Logo and Expand/Collapse Button */}
         <div className="relative flex items-center justify-center p-4">
           <img src="/image.png" alt="Logo" className="p-1" />
-          {isMobileMenuOpen && (
-            <button
-              onClick={() => {
-                setIsExpanded(!isExpanded);
-              }}
-              className={`absolute ${isMobileMenuOpen ? "left-[-14px]" : "right-[-14px]"} top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-md bg-white shadow-md flex items-center justify-center text-purple-800`}
-            >
-              {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
-            </button>
-          )}
+          {/* Expand/Collapse Button on both mobile and desktop */}
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className={`absolute ${isMobileMenuOpen ? "left-[-14px]" : "right-[-14px]"} top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-md bg-white shadow-md flex items-center justify-center text-purple-800`}
+          >
+            {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
+          </button>
         </div>
 
         {/* Sidebar Items */}
@@ -94,11 +89,10 @@ function SidebarItem({ icon, label, route, isExpanded, textColor = "text-white" 
       <Link href={route}>
         <button
           className={`flex items-center ${isExpanded ? "justify-start w-full" : "justify-center"} p-3 rounded-lg cursor-pointer 
-          ${
-            isActive
-              ? "text-yellow-300 bg-white"
-              : `${textColor} hover:bg-white hover:text-black`
-          }`}
+          ${isActive
+            ? "text-yellow-300 bg-white"
+            : `${textColor} hover:bg-white hover:text-black`}
+          `}
         >
           <span className="text-lg">{icon}</span>
           {isExpanded && <span className="ml-3">{label}</span>}

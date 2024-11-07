@@ -7,8 +7,8 @@ const Page = () => {
   return (
     <div className='bg-gray-100'>
       <Hero />
-      <Section/>
-      <SecondSection/>
+      {/* <Section/>
+      <SecondSection/> */}
     </div>
   );
 };
