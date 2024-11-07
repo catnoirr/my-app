@@ -1,66 +1,97 @@
-// pages/index.js
-
 import React from 'react';
 
-export default function Home() {
+const HowItWorks = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center">
-      <header className="bg-purple-900 w-full py-4 flex justify-end pr-4">
-        <button className="text-white border border-white px-4 py-2 rounded-full">
-          Apply for Sponsorship
-        </button>
-      </header>
+    <section className="bg-gray-100 py-16 md:ml-24">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center md:mb-32 mb-12">How It Works?</h2>
+        
+        <div className="relative flex flex-col md:flex-row items-center  justify-center bg-purple-900">
+          {/* Left Steps */}
+          <div className="flex flex-col items-center md:items-end space-y-8 md:space-y-12 md:mr-16">
+            {/* Step 1 */}
+            <div className="bg-purple-900 text-white p-6 rounded-md  max-w-xs mx-auto">
+      {/* Step Number Box */}
+      <div className="  h-8 flex items-center justify-end w-full rounded-md mb-4 mx-auto">
+        <p className="text-sm font-bold bg-purple-800 p-3 py-2 rounded-md ">1</p>
+      </div>
 
-      <main className="flex flex-col items-center text-center p-8">
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full">
-          <div className="flex items-center justify-center mb-4">
-            <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm">
-              Award Winning digital service
-            </span>
+      {/* Main Text */}
+      <h3 className="text-lg font-semibold mb-2">Submit Your Event Details</h3>
+      <p className="text-xs text-gray-300">
+        Provide your event information in our easy-to-use form.
+      </p>
+    </div>
+            
+            {/* Step 2 */}
+            
+              <div className="bg-purple-900 text-white p-6 rounded-md  max-w-xs mx-auto">
+      {/* Step Number Box */}
+      <div className="  h-8 flex items-center justify-end w-full rounded-md mb-4 mx-auto">
+        <p className="text-sm font-bold bg-purple-800 p-3 py-2 rounded-md ">2</p>
+      </div>
+
+      {/* Main Text */}
+      <h3 className="text-lg font-semibold mb-2">Discuss Sponsorship Options</h3>
+      <p className="text-xs text-gray-300">
+      We’ll reach out to understand your event’s needs.
+      </p>
+    </div>
           </div>
-          <h1 className="text-3xl font-bold mb-4">
-            Maximize Engagement at Your Next Big Event!
-          </h1>
-          <p className="text-gray-600 mb-8">
-            At Oohpoint, we are passionate about partnering with events of all types—
-            college fests, corporate gatherings, competitions, and more. Whether it's a
-            small or large event, we can provide the perfect sponsorship to ensure your
-            attendees get the most out of your occasion.
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="border border-gray-300 rounded-lg px-4 py-2 flex-1"
-            />
-            <button className="bg-black text-white px-4 py-2 rounded-lg">
-              Book a free consultation
-            </button>
+          {/* Mobile Device Image */}
+          <div className="relative mx-auto my-8 md:my-0 md:bottom-32">
+            <img src="/mobile.png" alt="Dashboard" className="w-64 md:w-80  rounded-lg" />
+            {/* Rating */}
+            <div className="text-center mt-4">
+              <p className="text-yellow-500 text-lg font-bold">★★★★☆</p>
+              <p className="text-sm text-white">4.5 / 5.0 Rating on Google</p>
+              <p className="text-xs text-gray-500">365 Ratings & Reviews</p>
+            </div>
           </div>
 
-          <div className="flex justify-between items-center mt-8 text-gray-600">
-            <div className="flex items-center gap-2">
-              <span className="bg-gray-200 p-2 rounded-full text-sm">24/7 Support</span>
-              <span>We are always here to help</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="bg-gray-200 p-2 rounded-full text-sm">Award Winning agency</span>
-              <span>You are in safe hands</span>
-            </div>
+          {/* Right Steps */}
+          <div className="flex flex-col items-center md:items-start space-y-8 md:space-y-12 md:ml-16">
+            {/* Step 3 */}
+            {/* <div className="bg-purple-800 text-white rounded-md p-4  max-w-xs">
+              <h3 className="text-lg font-bold mb-2">3</h3>
+              <p className="text-sm font-semibold">Get Sponsored</p>
+              <p className="text-xs mt-1">Partner with OohPoint for exclusive sponsorship benefits.</p>
+            </div> */}
+             <div className="bg-purple-900 text-white p-6 rounded-md  max-w-xs mx-auto">
+      {/* Step Number Box */}
+      <div className="  h-8 flex items-center justify-start w-full rounded-md mb-4 mx-auto">
+        <p className="text-sm font-bold bg-purple-800 p-3 py-2 rounded-md ">3</p>
+      </div>
+
+      {/* Main Text */}
+      <h3 className="text-lg font-semibold mb-2">Get Sponsored</h3>
+      <p className="text-xs text-gray-300">
+      Partner with OohPoint for exclusive sponsorship benefits.      </p>
+    </div>
+
+            {/* Step 4 */}
+            {/* <div className="bg-purple-800 text-white rounded-md p-4  max-w-xs">
+              <h3 className="text-lg font-bold mb-2">4</h3>
+              <p className="text-sm font-semibold">Boost Event Impact</p>
+              <p className="text-xs mt-1">Receive promotional materials, QR campaigns, and more.</p>
+            </div> */}
+             <div className="bg-purple-900 text-white p-6 rounded-md  max-w-xs mx-auto">
+      {/* Step Number Box */}
+      <div className="  h-8 flex items-center justify-start w-full rounded-md mb-4 mx-auto">
+        <p className="text-sm font-bold bg-purple-800 p-3 py-2 rounded-md ">3</p>
+      </div>
+
+      {/* Main Text */}
+      <h3 className="text-lg font-semibold mb-2">Boost Event Impact</h3>
+      <p className="text-xs text-gray-300">
+      Receive promotional materials, QR campaigns, and more.      </p>
+    </div>
           </div>
         </div>
-
-        <section className="flex flex-col items-center mt-12">
-          <h2 className="text-lg font-semibold mb-4">100+ Companies trust us</h2>
-          <div className="flex gap-8">
-            <img src="/marlboro-logo.png" alt="Marlboro" className="h-8" />
-            <img src="/intel-logo.png" alt="Intel" className="h-8" />
-            <img src="/amazon-logo.png" alt="Amazon" className="h-8" />
-            <img src="/uber-logo.png" alt="Uber" className="h-8" />
-          </div>
-        </section>
-      </main>
-    </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default HowItWorks;

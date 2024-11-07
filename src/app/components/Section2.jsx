@@ -1,65 +1,72 @@
-"use client";
-import Image from 'next/image';
+import React from 'react';
+import { FaAward } from "react-icons/fa";
 
-export default function Page() {
+
+const Hero = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="relative max-w-md">
-        {/* Main Image */}
-        <Image
-          src="/path/to/your/image.png" // Replace with actual path
-          width={600}
-          height={400}
-          alt="Laptop and plant on table"
-          className="rounded-lg"
-        />
+    <section className="flex flex-col md:flex-row  items-center justify-between bg-gray-10  p-5 md:p-16 md:ml-16">
+      {/* Left Side - Images and Statistics */}
+      <div className="flex gap-4">
+        {/* Image 1 */}
+        
+        <img src="/image1.png" alt="Workplace" className="rounded-lg shadow-md sm:w-64 w-36 h-auto hidden md:block" />
+        
+        {/* Statistics Boxes */}
+        <div className='flex flex-col gap-4 '>
 
-        {/* Top Card - Meeting With */}
-        <div className="absolute top-5 right-5 bg-purple-900 text-white p-3 rounded-lg shadow-lg flex items-center space-x-2">
-          <span className="text-sm font-semibold">Meeting with</span>
-          <div className="flex -space-x-2">
-            <img
-              src="/path/to/avatar1.jpg" // Replace with actual path
-              alt="Avatar 1"
-              className="w-8 h-8 rounded-full border-2 border-purple-800"
-            />
-            <img
-              src="/path/to/avatar2.jpg" // Replace with actual path
-              className="w-8 h-8 rounded-full border-2 border-purple-800"
-              alt="Avatar 2"
-            />
+        <div className="flex space-x-4 items-center justify-center">
+          <div className="bg-black text-white text-center py-4 px-6 rounded-md">
+            <p className="text-xl font-bold">10+</p>
+            <p className="text-sm">Years of experience</p>
+          </div>
+          <div className="bg-purple-800 text-white text-center py-4 px-6 rounded-md">
+            <p className="text-xl font-bold">1.2K</p>
+            <p className="text-sm">Happy Customers</p>
           </div>
         </div>
 
-        {/* Bottom Card - Customer Satisfaction */}
-        <div className="absolute bottom-5 left-5 bg-purple-900 text-white p-4 rounded-lg shadow-lg w-48">
-          <p className="text-sm font-semibold">Our Lovely Customers</p>
-          <div className="flex items-center space-x-2 mt-1">
-            <div className="flex -space-x-2">
-              <img
-                src="/path/to/avatar3.jpg" // Replace with actual path
-                className="w-6 h-6 rounded-full border-2 border-purple-800"
-                alt="Avatar 3"
-              />
-              <img
-                src="/path/to/avatar4.jpg" // Replace with actual path
-                className="w-6 h-6 rounded-full border-2 border-purple-800"
-                alt="Avatar 4"
-              />
-              <img
-                src="/path/to/avatar5.jpg" // Replace with actual path
-                className="w-6 h-6 rounded-full border-2 border-purple-800"
-                alt="Avatar 5"
-              />
-            </div>
-            <span className="text-sm">5K+</span>
-          </div>
-          <p className="text-xs mt-2">Satisfaction Rate 80%</p>
-          <div className="w-full bg-gray-700 rounded-full h-2 mt-1">
-            <div className="bg-yellow-400 h-2 rounded-full" style={{ width: '80%' }}></div>
-          </div>
+        {/* Image 2 */}
+        <div className='h-full'>
+        <img src="/image2.png" alt="Workplace" className="rounded-lg shadow-md h-full object-cover" />
         </div>
       </div>
-    </div>
+      </div>
+
+      {/* Right Side - Content */}
+      <div className="mt-8 md:mt-0 md:ml-16">
+      <div className="flex items-center mb-4  bg-gray-200 border rounded-xl shadow p-2 w-64 sm:w-72">
+            <i> <FaAward className="text-4xl text-red-800" /></i>
+            <p className="ml-2 text-sm sm:text-base">Award winning digital service</p>
+          </div>
+          
+                  <h2 className="text-3xl font-bold text-gray-900 mt-2">Why Partner with Oohpoint?</h2>
+        <p className="text-gray-700 mt-4">
+          Gain valuable insights into your digital campaigns with our comprehensive data analytics and reporting feature.
+        </p>
+        <ul className="mt-4 space-y-2">
+          <li className="flex items-center">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+            Tailored Sponsorship Packages
+          </li>
+          <li className="flex items-center">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+            Maximized Footfall Engagement
+          </li>
+          <li className="flex items-center">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+            Diverse Event Types
+          </li>
+          <li className="flex items-center">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+            Boost Event Buzz
+          </li>
+        </ul>
+        <button className="mt-6 bg-purple-800 text-white py-2 px-6 rounded-md hover:bg-purple-700">
+          Discover more
+        </button>
+      </div>
+    </section>
   );
-}
+};
+
+export default Hero;

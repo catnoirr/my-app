@@ -67,12 +67,12 @@ export default function Home() {
               <span className="text-xs sm:text-sm font-semibold">Meeting with</span>
               <div className="flex -space-x-2">
                 <img
-                  src="/path/to/avatar1.jpg" // Replace with actual path
+                  src="/user1.jpeg" // Replace with actual path
                   alt="Avatar 1"
                   className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-purple-800"
                 />
                 <img
-                  src="/path/to/avatar2.jpg" // Replace with actual path
+                  src="/user1.jpeg" // Replace with actual path
                   className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-purple-800"
                   alt="Avatar 2"
                 />
@@ -85,17 +85,17 @@ export default function Home() {
               <div className="flex items-center space-x-2 mt-1">
                 <div className="flex -space-x-2">
                   <img
-                    src="/path/to/avatar3.jpg" // Replace with actual path
+                    src="/user1.jpeg" // Replace with actual path
                     className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-purple-800"
                     alt="Avatar 3"
                   />
                   <img
-                    src="/path/to/avatar4.jpg" // Replace with actual path
+                    src="/user1.jpeg" // Replace with actual path
                     className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-purple-800"
                     alt="Avatar 4"
                   />
                   <img
-                    src="/path/to/avatar5.jpg" // Replace with actual path
+                    src="/user1.jpeg" // Replace with actual path
                     className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-purple-800"
                     alt="Avatar 5"
                   />
@@ -110,6 +110,25 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <div className="flex flex-wrap justify-between items-center py-4 px-4 md:ml-28 md:mr-6 gap-4">
+  {/* Heading */}
+  <div className="w-full md:w-52">
+    <h1 className="text-lg md:text-xl font-semibold text-center md:text-left">
+      100+ Top Companies Trust Us
+    </h1>
+  </div>
+
+  {/* Logos */}
+  <div className="flex flex-wrap justify-around items-center gap-4 md:gap-6 w-full md:w-auto flex-1">
+    <img src="/Malboro.png" alt="Malboro Logo" className="h-8 w-auto" />
+    <img src="/intel.png" alt="Intel Logo" className="h-8 w-auto" />
+    <img src="/Amazon.png" alt="Amazon Logo" className="h-8 w-auto" />
+    <img src="/Uber.png" alt="Uber Logo" className="h-8 w-auto" />
+  </div>
+</div>
+
+
+
     </div>
   );
 }
